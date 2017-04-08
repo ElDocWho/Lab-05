@@ -51,14 +51,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a,b,c){
-  var array = [];
-  var d = a + b + c;
-  var e = a * b * c;
-  array[0] = d;
-  array[1] = e;
-  array[2] = a + ' and ' + b + ' and ' + c + ' sum to ' + d + '.';
-  array[3] = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + e + '.';
-  return array;
+  var arraySumMult = [];
+  var d = sum((sum(a,b)[0]),c)[0];
+  var e = multiply(multiply(a,b)[0],c)[0];
+  arraySumMult[0] = d;
+  arraySumMult[1] = e;
+  arraySumMult[2] = a + ' and ' + b + ' and ' + c + ' sum to ' + d + '.';
+  arraySumMult[3] = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + e + '.';
+  return arraySumMult;
 }
 sumAndMultiply(4,7,5);
 
@@ -105,8 +105,9 @@ function multiplyArray(testArray){
   array[1] = 'The numbers ' + testArray + ' have a product of ' + array[0] + '.';
   return array;
 }
+multiplyArray(testArray);
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(2,3,4);
+testMultiplyArray(2,3,4);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
